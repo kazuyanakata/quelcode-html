@@ -132,6 +132,17 @@ article h2 {
   margin-bottom: 30px;
 }
 
+article h2::before {
+  content: "";
+  background-image: url(images/title-mark.png);
+  background-size: cover;
+  background-position: 0 2px;
+  display: inline-block;
+  width: 22px;
+  height: 22px;
+  margin-right: 7px;
+}
+
 .main-script {
   font-size: 16px;
   line-height: 2;
@@ -172,6 +183,7 @@ article img {
   content: "";
   background-image: url(images/pdf.png);
   background-size: cover;
+  background-position: 0 2px;
   width: 20px;
   height: 20px;
   margin-left: 10px;
