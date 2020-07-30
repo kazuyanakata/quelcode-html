@@ -17,7 +17,6 @@ html {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-bottom: 10px;
   background-color: #fff;
 
   /* 固定させてる */
@@ -31,31 +30,45 @@ html {
 }
 
 .header-left img{
-  width: 75px;
-  height: 40px;
+  width: 58px;
+  height: 30px;
 }
 
 .header-right,.menu-left {
   display: flex;
 }
 
+.menu-left li {
+  margin-right: 17px;
+}
+
 .menu-left a {
+  display: inline-block;
   color: #000;
-  font-weight: bolder;
+  font-weight: 700;
   font-size: 14px;
-  margin-right:10px;
-  padding-bottom: 15px;
+  letter-spacing: -1px;
+  line-height: 58px;
 }
 
 .menu-left a:hover {
   color: #005bac;
   border-bottom: 2px solid #005bac;
+  transition: 0.3s;
 }
 
 .menu-right {
+  width: 60px;
+  height: 60px;
+  position: relative;
+}
+
+.menu-right img {
   width: 20px;
   height: 20px;
-  margin: 5px 20px 0;
+  position: absolute;
+  top: 20px;
+  right: 20px;
 }
 
 .menu-right:hover {
@@ -65,8 +78,9 @@ html {
 /* 経路 */
 .path {
   font-size: 12px;
-  width: 90%;
-  margin: 60px auto 20px;
+  max-width: 1280px;
+  width: 94%;
+  margin: 60px auto 25px;
 }
 
 .path a {
@@ -84,19 +98,19 @@ html {
 }
 
 .title p,.title h1 {
-  width: 75%;
+  width: 70%;
   color: #fff;
   margin: 0 auto;
 }
 
 .title p {
   font-size: 20px;
-  margin-bottom: 20px;
+  margin-bottom: 16px;
 }
 
 .title h1 {
   font-size: 28px;
-  font-weight: bold;
+  font-weight: 700;
 }
 
 /* SNS */
@@ -108,11 +122,13 @@ html {
 }
 
 .sns-box p {
-  font-size: 0.5rem;
+  font-size: 12px;
+  color: #666;
   line-height: 24px;
 }
 
 .sns-box a {
+  height: 20px;
   margin-left: 20px;
 }
 
@@ -141,13 +157,18 @@ article h2::before {
   display: inline-block;
   width: 22px;
   height: 22px;
-  margin-right: 7px;
+  margin-right: 10px;
 }
 
 .main-script {
   font-size: 16px;
-  line-height: 2;
-  margin-bottom: 16px;
+  font-weight: 200;
+  color: rgb(51, 51, 51);
+  line-height: 30px;
+}
+
+.blank {
+  margin: 16px 0 30px 0;
 }
 
 article img {
@@ -156,9 +177,9 @@ article img {
 
 .btn {
   height: 70px;
-  width: 37%;
+  width: 40%;
   margin: 40px auto 80px;
-  padding: 10px 0;
+  padding: 10px 20px;
   background-color: #005bac;
   text-align: center;
   display: flex;
@@ -169,14 +190,18 @@ article img {
   transition: all 0.5s;
 }
 
-.btn p {
-  font-size: 5px;
+.btn a {
+  display: inline-block;
+  font-size: 15px;
   color: #fff;
-  padding: 15px 10px 0 5px;
 }
 
-.btn a {
+.btn::before {
+  font-size: 10px;
+  display: inline-block;
+  content: ">";
   color: #fff;
+  margin: auto 10px auto 0;
 }
 
 .btn a::after {
@@ -197,8 +222,18 @@ article img {
   margin-bottom: 40px;
 }
 
+
+.main-link span {
+  display: inline-block;
+  font-size: 10px;
+  line-height: 16px;
+}
+
 .main-link a {
+  display: inline-block;
+  font-size: 16px;
   color: #0c419a;
+  line-height: 16px;
 }
 
 .main-link a:hover {
@@ -228,20 +263,26 @@ article img {
   font-size: 15px;
   background-color: white;
   border: 1px solid #ccc;
-  padding: 15px 20px;
 }
 
-.strong-points li::before {
+.strong-points a::before {
+  display: inline-block;
   content: ">";
+  font-size: 10px;
   color: #333;
   text-align: left;
+  position: absolute;
+  top: 18px;
+  left: 10px;
 }
 
 .strong-points a {
   display: inline-block;
-  width: 95%;
+  width: 100%;
   color: #0c419a;
   text-align: center;
+  padding: 15px 20px;
+  position: relative;
 }
 
 .strong-points li:hover {
@@ -253,11 +294,11 @@ article img {
 /* 企業情報 */
 .company-info {
   max-width: 1000px;
-  margin: 80px auto 0;
+  margin: 120px auto 0;
 }
 .company-info h2 {
   font-size: 20px;
-  padding: 15px 0 30px;
+  padding: 18px 0 30px;
   border-top: 2px solid #000;
   border-bottom: 1px dashed #999;
 }
@@ -275,6 +316,7 @@ article img {
 .info-topics ul {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
+  gap: 10px;
   grid-template-rows: repeat( auto-fit, 1fr);
 }
 
@@ -283,13 +325,18 @@ article img {
   padding-top: 10px;
 }
 
-.info-topics li::before {
+.info-topics a::before {
+  display: inline-block;
   content: ">";
-  margin-right: 16px;
   color: #333;
+  margin-right: 16px;
+  text-align: left;
+  text-decoration-line: none;
 }
 
 .info-topics a {
+  display: inline-block;
+  width: 100%;
   color: #0c419a;
 }
 
@@ -298,13 +345,20 @@ article img {
 }
 
 /* 前のページに戻る */
-.back-page {
+.back-page a{
   display: inline-block;
-  margin: 60px 0 80px 15px;
+  margin: 60px 0 80px;
   color: #0c419a;
 }
 
-.back-page:hover {
+.back-page span {
+  color: #000;
+  font-size: 10px;
+  margin-right: 15px;
+  text-decoration-line: none;
+}
+
+.back-page a:hover {
   text-decoration: underline;
 }
 
@@ -321,6 +375,7 @@ article img {
 .sns-topic p {
   font-size: 20px;
   font-weight: bold;
+  color: #000;
 }
 
 .sns-topic a {
@@ -335,8 +390,7 @@ article img {
 /* その他リンク */
 .another-link {
   max-width: 1100px;
-  margin: 0 auto 70px;
-  padding: 45px 0;
+  margin: 0 auto 40px;
 }
 
 .another-links {
@@ -348,6 +402,8 @@ article img {
 
 .another-links h4 {
   display: inline;
+  color: #000;
+  font-size: 16px;
 }
 
 .another-links li {
@@ -355,14 +411,19 @@ article img {
   margin: 16px 0;
 }
 
-.another-links li:before {
+.another-links a:before {
+  display: inline-block;
   content: ">";
   margin-right: 8px;
   color: #333;
+  text-align: left;
+  text-decoration-line: none;
 }
 
 .another-links a {
+  display: inline-block;
   color: #333;
+  width: 100%;
 }
 
 .another-links a:hover {
@@ -379,28 +440,37 @@ article img {
 footer {
   width: 100%;
   border-top: 1px solid #999;
-  padding-top: 40px;
+  padding-top: 70px;
   margin-bottom: 110px;
 }
 
-footer ul {
+.footer-content, .footer-content-company {
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.footer-content ul {
   display: flex;
-  justify-content: center;
+  justify-content: flex-start;
 }
 
-footer li {
+.footer-content li {
   font-size: 12px;
-  padding: 0 15px;
-  border-left: 0.1px solid #999;
-  border-right: 0.1px solid #999;
 }
 
-footer a {
-  display: block;
+.footer-item::before {
+  display: inline;
+  content: "|";
+  color: #999;
+  margin: 0 12px;
+}
+
+.footer-content a {
+  display: inline-block;
   color: #999;
 }
 
-footer a:hover {
+.footer-content a:hover {
   text-decoration: underline;
 }
 
@@ -412,9 +482,8 @@ footer a:hover {
   border-right: none;
 }
 
-footer p {
+.footer-content-company {
   font-size: 10px;
   color: #333;
   margin-top: 20px;
-  margin-left: 17.5%;
 }
