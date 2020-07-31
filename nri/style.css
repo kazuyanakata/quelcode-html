@@ -443,8 +443,8 @@ article img {
 
 /* その他リンク */
 .another-link {
-  max-width: 1280px;
-  margin: 0 73px 60px;
+  max-width: 1200px;
+  margin: 0 auto 60px;
 }
 
 .another-links {
