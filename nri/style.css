@@ -4,6 +4,7 @@
   list-style: none;
   text-decoration: none;
   font-family: 'Noto Sans JP', sans-serif;
+  font-weight: 400;
 }
 
 html {
@@ -39,16 +40,16 @@ html {
 }
 
 .menu-left li {
-  margin-right: 17px;
+  margin-right: 14px;
 }
 
 .menu-left a {
   display: inline-block;
   color: #000;
-  font-weight: 700;
+  font-weight: 500;
   font-size: 14px;
-  letter-spacing: -1px;
   line-height: 58px;
+  text-align: left;
 }
 
 .menu-left a:hover {
@@ -85,7 +86,17 @@ html {
 
 .path a {
   color: #999;
-  margin: 0 6px 0 2px;
+  opacity: 0.8;
+}
+
+.path-content::after {
+  display: inline-block;
+  content: "";
+  background-image: url(images/arrow-whiteback.png);
+  background-size: contain;
+  width: 4px;
+  height: 8px;
+  margin: 0 2px 0 6px;
 }
 
 /* タイトル */
@@ -106,6 +117,7 @@ html {
 .title p {
   font-size: 20px;
   margin-bottom: 16px;
+  font-weight: 400;
 }
 
 .title h1 {
@@ -123,6 +135,7 @@ html {
 
 .sns-box p {
   font-size: 12px;
+  font-weight: 600;
   color: #666;
   line-height: 24px;
 }
@@ -147,6 +160,7 @@ article, .main-link, .strong-point {
 article h2 {
   font-size: 22px;
   margin-bottom: 30px;
+  font-weight: 700;
 }
 
 article h2::before {
@@ -162,7 +176,7 @@ article h2::before {
 
 .main-script {
   font-size: 16px;
-  font-weight: 200;
+  font-weight: 400;
   color: rgb(51, 51, 51);
   line-height: 30px;
 }
@@ -176,13 +190,8 @@ article img {
 }
 
 .btn {
-  height: 70px;
   width: 40%;
   margin: 40px auto 80px;
-  padding: 10px 20px;
-  background-color: #005bac;
-  text-align: center;
-  display: flex;
 }
 
 .btn:hover {
@@ -192,16 +201,26 @@ article img {
 
 .btn a {
   display: inline-block;
-  font-size: 15px;
+  font-size: 16px;
+  line-height: 16px;
+  font-weight: 300;
   color: #fff;
+  padding: 17px 20px;
+  background-color: #005bac;
+  text-align: center;
+  position: relative;
 }
 
-.btn::before {
-  font-size: 10px;
+.btn a::before {
   display: inline-block;
-  content: ">";
-  color: #fff;
-  margin: auto 10px auto 0;
+  content: "";
+  background-image: url(images/arrow-blueback.png);
+  background-size: contain;
+  width: 6px;
+  height: 8px;
+  position: absolute;
+  top: 30px;
+  left: 12px;
 }
 
 .btn a::after {
@@ -211,7 +230,7 @@ article img {
   background-size: cover;
   background-position: 0 2px;
   width: 20px;
-  height: 20px;
+  height: 18px;
   margin-left: 10px;
 }
 
@@ -242,47 +261,65 @@ article img {
 
 /* NRIの強み */
 .strong-point {
-  width: 100%;
+  max-width: 800px;
   padding: 20px 20px 40px;
   background-color: #deecf8;
 }
 
 .strong-point h3 {
   font-size: 16px;
+  font-weight: 700;
   margin-bottom: 16px;
 }
 
 .strong-points {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 10px;
-  grid-template-rows: repeat(2, 1fr);
+  gap: 20px;
 }
 
-.strong-points li {
-  font-size: 15px;
+.strong-item {
+  display: table;
   background-color: white;
   border: 1px solid #ccc;
 }
 
-.strong-points a::before {
-  display: inline-block;
-  content: ">";
-  font-size: 10px;
-  color: #333;
-  text-align: left;
-  position: absolute;
-  top: 18px;
-  left: 10px;
+.first ,.second, .third {
+  height: 70px;
 }
 
 .strong-points a {
   display: inline-block;
   width: 100%;
+  height: 100%;
+  line-height: 100%;
+  font-size: 16px;
+  font-weight: 400;
   color: #0c419a;
   text-align: center;
+  vertical-align: middle;
   padding: 15px 20px;
   position: relative;
+}
+
+.strong-item a::before {
+  display: inline-block;
+  content: "";
+  background-image: url(images/arrow-whiteback.png);
+  background-size: contain;
+  width: 4px;
+  height: 10px;
+  position: absolute;
+  top: 0;
+  left: 10px;
+  margin: 30px 0;
+}
+
+.fourth a::before, .fifth a::before, .sixth a::before {
+  margin: 18px 0;
+}
+.second a, .third a {
+  padding: 25px 20px;
 }
 
 .strong-points li:hover {
@@ -309,7 +346,9 @@ article img {
 }
 
 .info-topics h3 {
-  font-weight: bold;
+  font-size: 16px;
+  font-weight: 700;
+  color: #333;
   margin-bottom: 10px;
 }
 
@@ -326,18 +365,24 @@ article img {
 }
 
 .info-topics a::before {
-  display: inline-block;
-  content: ">";
-  color: #333;
-  margin-right: 16px;
-  text-align: left;
+  display: block;
+  content: "";
+  background-image: url(images/arrow-whiteback.png);
+  background-size: contain;
+  width: 8px;
+  height: 8px;
   text-decoration-line: none;
+  position: absolute;
+  top: 7px;
+  left: 0;
 }
 
 .info-topics a {
-  display: inline-block;
+  display: block;
   width: 100%;
   color: #0c419a;
+  position: relative;
+  padding-left: 15px;
 }
 
 .info-topics a:hover {
@@ -349,13 +394,22 @@ article img {
   display: inline-block;
   margin: 60px 0 80px;
   color: #0c419a;
+  position: relative;
+  padding-left: 18px;
 }
 
-.back-page span {
-  color: #000;
-  font-size: 10px;
-  margin-right: 15px;
+.back-page a::before {
+  display: inline-block;
+  content: "";
+  background-image: url(images/arrow-whiteback.png);
+  background-size: contain;
+  transform: scale(-1,1);
+  width: 6px;
+  height: 8px;
   text-decoration-line: none;
+  position: absolute;
+  top: 8px;
+  left: 0;
 }
 
 .back-page a:hover {
@@ -368,18 +422,18 @@ article img {
   max-width: 100%;
   justify-content: center;
   padding: 30px 0;
-  border-top: 2px solid #000;
-  border-bottom: 2px solid #000;
+  border-top: 2px solid #999;
+  border-bottom: 2px solid #999;
 }
 
 .sns-topic p {
   font-size: 20px;
-  font-weight: bold;
-  color: #000;
+  font-weight: 700;
+  color: #333;
 }
 
 .sns-topic a {
-  margin-left: 30px;
+  margin-left: 40px;
 }
 
 .sns-topic .sns {
@@ -389,41 +443,40 @@ article img {
 
 /* その他リンク */
 .another-link {
-  max-width: 1100px;
-  margin: 0 auto 40px;
+  max-width: 1280px;
+  margin: 0 73px 60px;
 }
 
 .another-links {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  gap: 60px;
-  grid-template-rows: repeat(2, 1fr);
-}
-
-.another-links h4 {
-  display: inline;
-  color: #000;
-  font-size: 16px;
+  gap: 40px;
 }
 
 .another-links li {
-  font-size: 14px;
   margin: 16px 0;
 }
 
 .another-links a:before {
   display: inline-block;
-  content: ">";
-  margin-right: 8px;
-  color: #333;
-  text-align: left;
+  content: "";
+  background-image: url(images/arrow-whiteback.png);
+  background-size: contain;
+  width: 6px;
+  height: 6px;
   text-decoration-line: none;
+  position: absolute;
+  top: 10px;
+  left: 0;
 }
 
 .another-links a {
   display: inline-block;
+  font-size: 14px;
   color: #333;
   width: 100%;
+  position: relative;
+  padding-left: 12px;
 }
 
 .another-links a:hover {
@@ -431,9 +484,15 @@ article img {
 }
 
 .links-title {
-  font-size: 16px;
   padding: 8px 0;
-  font-weight: bold;
+}
+
+
+.links-title a {
+  display: inline;
+  color: #333;
+  font-size: 16px;
+  font-weight: 700;
 }
 
 /* フッター */
@@ -445,7 +504,7 @@ footer {
 }
 
 .footer-content, .footer-content-company {
-  max-width: 1100px;
+  max-width: 1000px;
   margin: 0 auto;
 }
 
@@ -454,15 +513,18 @@ footer {
   justify-content: flex-start;
 }
 
-.footer-content li {
+.footer-content a {
   font-size: 12px;
+  font-weight: 300;
 }
 
 .footer-item::before {
   display: inline;
   content: "|";
   color: #999;
-  margin: 0 12px;
+  font-size: 12px;
+  font-weight: 100;
+  margin: 0 14px;
 }
 
 .footer-content a {
@@ -472,14 +534,6 @@ footer {
 
 .footer-content a:hover {
   text-decoration: underline;
-}
-
-.first {
-  border-left: none;
-}
-
-.last {
-  border-right: none;
 }
 
 .footer-content-company {
