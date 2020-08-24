@@ -26,6 +26,9 @@ header {
   height: 26px;
   margin-top: 16px;
 }
+.header-logo-res {
+  display: none;
+}
 .link {
   margin-top: 26px;
 }
@@ -41,18 +44,6 @@ header {
 }
 .now a {
   color: #3B3B3B;
-}
-/* 共通部分（ヘッダー）モバイル */
-@media(max-width:375px){
-  header {
-    background-color: #918F89;
-  }
-  .header-logo {
-    margin: 0 auto;
-  }
-  .link {
-    display: none;
-  }
 }
 /* 共通部分（フッター） */
 footer {
@@ -82,6 +73,7 @@ footer {
 .company-name {
   color: #FFFFFF;
   text-align: center;
+  margin: 0 auto;
 }
 
 /* ホームページ（タイトル） */
@@ -108,6 +100,7 @@ footer {
 }
 /* ホームページ（コンセプト） */
 .concept {
+  max-width: 100%;
   display: flex;
   padding: 0 88px;
   margin-bottom: 240px;
@@ -118,7 +111,6 @@ footer {
 }
 .concept-right {
   max-width: 560px;
-  height: 560px;
   padding: 240px 0 90px 56px;
   text-align: left;
 }
@@ -136,6 +128,9 @@ footer {
   color: #3B3B3B;
   letter-spacing: 0.38px;
   line-height: 28px;
+}
+.br-res {
+  display: none;
 }
 
 /* ホームページ（ニュース） */
@@ -400,4 +395,180 @@ footer {
   color: #3B3B3B;
   letter-spacing: 0.6px;
   margin-bottom: 72px;
+}
+
+/* レスポンシブ対応 */
+@media (max-width:375px) {
+  /* 共通部分 */
+  body {
+    max-width: 375px;
+  }
+
+  /* 共通部分（ヘッダー）モバイル */
+  header {
+    background-color: #918F89;
+    padding: 0;
+  }
+  .header-logo-res {
+    display: block;
+    margin: auto;
+    width: 40px;
+    height: 24px;
+  }
+  .header-logo {
+    display: none;
+  }
+  .link {
+    display: none;
+  }
+  /* 共通部分（フッター） */
+  footer {
+    padding: 72px 0 32px;
+  }
+  .footer-main {
+    padding: 0 auto;
+    margin-bottom: 82px;
+  }
+  .footer-logo {
+    margin: 0 auto;
+    width: 52px;
+    height: 32px;
+  }
+  .footer-link {
+    display: none;
+  }
+  /* ホームページ（タイトル） */
+  .title {
+    background-image: url(images/home_top_sp.png);
+    background-size: cover;
+    background-position: center bottom;
+    padding-top: 144px;
+  }
+  .title-area {
+    width: 100%;
+    background-color: transparent;
+    padding: 0;
+  }
+  .main-title {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .main-title span {
+    display: block;
+    background-color: #FFFFFF;
+    padding: 16px 16px 16px 54px;
+    margin-bottom: 16px;
+    line-height: 48px;
+  }
+  /* ホームページ（コンセプト） */
+  .concept {
+    flex-direction: column-reverse;
+    padding: 0;
+  }
+  .br-res {
+    display: block;
+  }
+  .concept-right {
+    max-width: 375px;
+    padding: 0 8px;
+    margin-bottom: 24px;
+    text-align: center;
+  }
+  .concept-title {
+    max-width: 214px;
+    font-size: 21px;
+    margin: 0 73px 32px 88px;
+  }
+  .concept-script {
+    max-width: 375px;
+    font-size: 14px;
+  }
+  .concept-left {
+    margin: 0 auto;
+  }
+  .concept-left img {
+    width: 328px;
+    height: 264px;
+  }
+  /* ホームページ（ニュース） */
+  .news {
+    max-width: 375px;
+    padding: 0 51px;
+  }
+  .news-title {
+    margin-bottom: 24px;
+  }
+  .news-items {
+    flex-direction: column;
+    margin-bottom: 8px;
+  }
+  .news-item {
+    height: 272px;
+    margin-bottom: 24px;
+  }
+  .news-item img {
+    width: 273px;
+    height: 272px;
+    opacity: 0.4;
+  }
+  .news-item p {
+    font-size: 15px;
+    opacity: 1;
+    top: 122px;
+    left: 36.5px;
+  }
+  .more-link {
+    opacity: 1;
+  }
+  /* ホームページ（カタログ） */
+  .catalog-title {
+    margin-bottom: 48px;
+  }
+  .catalog-script {
+    width: 328px;
+    font-size: 14px;
+    margin: 0 auto 40px;
+  }
+  .download {
+    width: 280px;
+    padding: 19px 32px;
+  }
+  /* ホームページ（コンタクト） */
+  .contact-title {
+    margin-bottom: 32px;
+  }
+  .contact-form {
+    width: 286px;
+  }
+  .contact-form input[type="text"], .contact-form input[type="email"] {
+    border-radius: 11px;
+    margin-bottom: 16px;
+    font-size: 14px;
+    padding: 11px 0 7px 17px;
+  }
+  .contact-form textarea {
+    height: 160px;
+    border-radius: 11px;
+    padding: 15px 0 0 17px;
+    font-size: 14px;
+    margin-bottom: 32px;
+  }
+  .contact-form input[type="submit"] {
+    width: 173px;
+    border-radius: 30px;
+    padding:12px 64px;
+    font-size: 18px;
+  }
+  /* ホームページ（リクルート） */
+  .recruit {
+    margin-bottom: 240px;
+  }
+  .recruit-title {
+    margin-bottom: 32px;
+  }
+  .recruit-script {
+    line-height: 35px;
+    margin-bottom: 24px;
+  }
 }
