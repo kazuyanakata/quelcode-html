@@ -45,6 +45,9 @@ header {
 .now a {
   color: #3B3B3B;
 }
+.link-res {
+  display: none;
+}
 /* 共通部分（フッター） */
 footer {
   width: 100%;
@@ -74,6 +77,9 @@ footer {
   color: #FFFFFF;
   text-align: center;
   margin: 0 auto;
+}
+.footer-link-res, .footer-logo-res-home {
+  display: none;
 }
 
 /* ホームページ（タイトル） */
@@ -390,6 +396,9 @@ footer {
   font-weight: normal;
   margin-bottom: 40px;
 }
+.contact-subtitle-res {
+  display: none;
+}
 .contact-script {
   font-size: 15px;
   color: #3B3B3B;
@@ -402,6 +411,7 @@ footer {
   /* 共通部分 */
   body {
     max-width: 375px;
+    position: relative;
   }
 
   /* 共通部分（ヘッダー）モバイル */
@@ -421,6 +431,15 @@ footer {
   .link {
     display: none;
   }
+  .link-res {
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    z-index: 10;
+  }
   /* 共通部分（フッター） */
   footer {
     padding: 72px 0 32px;
@@ -430,6 +449,19 @@ footer {
     margin-bottom: 82px;
   }
   .footer-logo {
+    display: none;
+  }
+  .footer-link-res {
+    display: block;
+    margin: 0 auto;
+    z-index: 11;
+  }
+  .footer-logo-res {
+    width: 52px;
+    height: 32px;
+  }
+  .footer-logo-res-home {
+    display: block;
     margin: 0 auto;
     width: 52px;
     height: 32px;
@@ -570,5 +602,93 @@ footer {
   .recruit-script {
     line-height: 35px;
     margin-bottom: 24px;
+  }
+  /* ニュースページ */
+  .title-news-page {
+    background-image: url(images/news_top_sp.png);
+    height: 648px;
+    background-position: center bottom;
+    padding: 200px 0 0;
+    text-align: center;
+  }
+  .main-title-news-page {
+    color: #3B3B3B;
+    font-size: 25px;
+    letter-spacing: 2.5px;
+  }
+  .news-news-page {
+    padding: 0 51px;
+    margin-bottom: 216px;
+  }
+  .news-subtitle {
+    margin-bottom: 32px;
+  }
+  .news-news-page .news-item {
+    margin-bottom: 32px;
+  }
+  /* リクルートページ */
+  .title-recruit-page {
+    background-image: url(images/recruit_top_sp.png);
+    height: 648px;
+    background-position: center bottom;
+    padding: 200px 0 0;
+    text-align: center;
+  }
+  .main-title-recruit-page {
+    color: #3b3b3b;
+    font-size: 25px;
+    letter-spacing: 2.5px;
+  }
+  .recruit-recruit-page {
+    margin-bottom: 256px;
+  }
+  .recruit-subtitle {
+    margin-bottom: 40px;
+  }
+  .recruit-info {
+    width: 344px;
+    border-radius: 4px;
+  }
+  .head {
+    font-size: 14px;
+  }
+  .data {
+    padding-left: 21px;
+  }
+  .data-title {
+    font-size: 15px;
+  }
+  .work-list {
+    font-size: 13px;
+  }
+  .data-content {
+    padding-bottom: 13px;
+  }
+  /* コンタクトページ */
+  .title-contact-page {
+    background-image: url(images/contact_top_sp.png);
+    height: 648px;
+    background-position: center bottom;
+    padding: 200px 0 0;
+    text-align: center;
+  }
+  .main-title-contact-page{
+    color: #FFFFFF;
+    font-size: 25px;
+    letter-spacing: 2.5px;
+  }
+  .contact-contact-page {
+    margin-bottom: 240px;
+  }
+  .contact-subtitle , .contact-script{
+    display: none;
+  }
+  .contact-subtitle-res {
+    display: block;
+    font-size: 24px;
+    color: #3B3B3B;
+    letter-spacing: 2.4px;
+    font-weight: normal;
+    margin-bottom: 32px;
   }
 }
