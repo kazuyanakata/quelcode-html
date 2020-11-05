@@ -35,4 +35,29 @@ $(window).on('load', () => {
         .nextAll('p').fadeOut();
     });
   };
+  
+  // CONTACTの「SEND」ボタン押下時のアニメーション
+  $('#send').on('mouseenter', (e) => {
+    $(e.currentTarget).css({
+      'backgroundColor': '#707070',
+      'color': '#d1d1d1'
+    });
+  }).on('mouseleave', (e) => {
+    $(e.currentTarget).css({
+      'backgroundColor': '',
+      'color': ''
+    });
+  }).on('click', (e) => {
+    $(e.currentTarget)
+      .css({
+        'transition': 'width 0.5s',
+        'paddingLeft': '0',
+        'paddingRight': '0',
+        'width': '280px',
+        'backgroundColor': '',
+        'color': ''
+      })
+      .attr('value', 'TRANSMISSION COMPLETED')
+    e.preventDefault();
+  });
 })
