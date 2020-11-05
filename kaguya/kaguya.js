@@ -35,7 +35,7 @@ $(window).on('load', () => {
         .nextAll('p').fadeOut();
     });
   };
-  
+
   // CONTACTの「SEND」ボタン押下時のアニメーション
   $('#send').on('mouseenter', (e) => {
     $(e.currentTarget).css({
@@ -59,5 +59,16 @@ $(window).on('load', () => {
       })
       .attr('value', 'TRANSMISSION COMPLETED')
     e.preventDefault();
+  });
+
+  // 「カタログをダウンロード」ボタンホバー時のアニメーション
+  $('.download').on('mouseenter', (e) => {
+    $(e.currentTarget)
+      .css('backgroundColor', '#707070')
+      .children().css('color', '#d1d1d1');
+  }).on('mouseleave', (e) => {
+    $(e.currentTarget)
+      .css('backgroundColor', '')
+      .children().css('color', '');
   });
 })
