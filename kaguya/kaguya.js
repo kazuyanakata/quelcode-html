@@ -19,4 +19,20 @@ $(window).on('load', () => {
     $('.nav_toggle').removeClass('show');
     $('.nav').slideUp(200);
   });
+
+  // news画像ホバー時のアニメーション
+  const maxWidth = 375;
+  if ($(window).width() > maxWidth) {
+    $('.news-item p').hide();
+    $('.news-background').hide();
+    $('.news-item').on('mouseenter', (e) => {
+      $(e.currentTarget)
+        .children('.news-background').slideDown()
+        .nextAll('p').fadeIn();
+    }).on('mouseleave', (e) => {
+      $(e.currentTarget)
+        .children('.news-background').slideUp()
+        .nextAll('p').fadeOut();
+    });
+  };
 })
